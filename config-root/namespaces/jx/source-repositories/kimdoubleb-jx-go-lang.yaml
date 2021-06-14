@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: KimDoubleB
+    provider: github
+    repository: jx-go-lang
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: kimdoubleb-jx-go-lang
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/KimDoubleB/jx-go-lang.git
+  org: KimDoubleB
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx-go-lang
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/KimDoubleB/jx-go-lang

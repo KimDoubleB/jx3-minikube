@@ -6,6 +6,18 @@ data:
       repos:
       - KimDoubleB/jx3-minikube
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - KimDoubleB/jx-go-lang
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - KimDoubleB/jx-spring-boot-gradle-quickstart
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - KimDoubleB/jx-spring-boot-quickstart
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -16,6 +28,21 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
+      KimDoubleB/jx-go-lang:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      KimDoubleB/jx-spring-boot-gradle-quickstart:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      KimDoubleB/jx-spring-boot-quickstart:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       KimDoubleB/jx3-minikube:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -26,6 +53,54 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      KimDoubleB/jx-go-lang:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      KimDoubleB/jx-spring-boot-gradle-quickstart:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      KimDoubleB/jx-spring-boot-quickstart:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       KimDoubleB/jx3-minikube:
       - config-updater
       - approve
@@ -55,6 +130,17 @@ data:
     - repos:
       - KimDoubleB/jx3-minikube
       trusted_org: todo
+    - repos:
+      - KimDoubleB/jx-go-lang
+      trusted_org: todo
+    - repos:
+      - KimDoubleB/jx-spring-boot-gradle-quickstart
+      trusted_org: todo
+    - repos:
+      - KimDoubleB/jx-spring-boot-quickstart
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
