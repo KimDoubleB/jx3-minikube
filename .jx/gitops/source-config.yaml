@@ -10,6 +10,12 @@ spec:
     repositories:
     - name: jx-spring-boot-quickstart
     scheduler: in-repo
+  - owner: KimDoubleB
+    provider: https://github.com
+    providerKind: github
+    repositories:
+    - name: jx-spring-boot-gradle-quickstart
+    scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
     kind: failureOrNextSuccess
