@@ -7,6 +7,9 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        KimDoubleB/jx-go-lang: true
+        KimDoubleB/jx-spring-boot-gradle-quickstart: true
+        KimDoubleB/jx-spring-boot-quickstart: true
         KimDoubleB/jx3-minikube: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +22,9 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        KimDoubleB/jx-go-lang: merge
+        KimDoubleB/jx-spring-boot-gradle-quickstart: merge
+        KimDoubleB/jx-spring-boot-quickstart: merge
         KimDoubleB/jx3-minikube: merge
       queries:
       - labels:
@@ -31,6 +37,9 @@ data:
         - needs-rebase
         repos:
         - KimDoubleB/jx3-minikube
+        - KimDoubleB/jx-go-lang
+        - KimDoubleB/jx-spring-boot-gradle-quickstart
+        - KimDoubleB/jx-spring-boot-quickstart
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +50,9 @@ data:
         - needs-rebase
         repos:
         - KimDoubleB/jx3-minikube
+        - KimDoubleB/jx-go-lang
+        - KimDoubleB/jx-spring-boot-gradle-quickstart
+        - KimDoubleB/jx-spring-boot-quickstart
       target_url: http://dashboard-jx.192.168.64.2.nip.io
 kind: ConfigMap
 metadata:
