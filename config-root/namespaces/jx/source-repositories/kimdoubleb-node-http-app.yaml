@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: KimDoubleB
+    provider: github
+    repository: node-http-app
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: kimdoubleb-node-http-app
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/KimDoubleB/node-http-app.git
+  org: KimDoubleB
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: node-http-app
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/KimDoubleB/node-http-app
