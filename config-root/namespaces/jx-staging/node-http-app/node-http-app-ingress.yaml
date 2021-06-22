@@ -1,0 +1,19 @@
+# Source: node-http-app/templates/ingress.yaml
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    meta.helm.sh/release-name: 'node-http-app'
+  name: node-http-app
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              serviceName: node-http-app
+              servicePort: 80
+      host: node-http-app-jx-staging.192.168.64.7.nip.io

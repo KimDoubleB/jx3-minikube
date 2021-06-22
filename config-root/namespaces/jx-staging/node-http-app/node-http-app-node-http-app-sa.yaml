@@ -1,0 +1,10 @@
+# Source: node-http-app/templates/sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: node-http-app-node-http-app
+  annotations:
+    meta.helm.sh/release-name: 'node-http-app'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'

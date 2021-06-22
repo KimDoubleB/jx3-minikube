@@ -119,3 +119,21 @@
     repositoryUrl: https://cdfoundation.github.io/tekton-helm-chart
     resourcePath: config-root/namespaces/tekton-pipelines/tekton-pipeline
     version: 0.24.4
+- namespace: jx-staging
+  path: helmfiles/jx-staging/helmfile.yaml
+  releases:
+  - apiVersion: v1
+    appVersion: 0.0.1
+    applicationUrl: http://node-http-app-jx-staging.192.168.64.7.nip.io
+    description: A Helm chart for Kubernetes
+    firstDeployed: "2021-06-22T06:40:45Z"
+    icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
+    ingresses:
+    - name: node-http-app
+      url: http://node-http-app-jx-staging.192.168.64.7.nip.io
+    lastDeployed: "2021-06-22T06:40:45Z"
+    name: node-http-app
+    repositoryName: dev
+    repositoryUrl: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts/
+    resourcePath: config-root/namespaces/jx-staging/node-http-app
+    version: 0.0.1
